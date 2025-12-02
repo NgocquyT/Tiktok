@@ -1,62 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Random TikTok Link</title>
+    <meta charset="UTF-8">
+    <title>Random TikTok Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #ff0050;
+            color: white;
+        }
+        button:hover {
+            background: #e60048;
+        }
+    </style>
 </head>
 <body>
-<pre id="json"></pre>
 
-<script>
-const links = [
-    "https://vt.tiktok.com/ZSfXLgJJs/",
-    "https://vt.tiktok.com/ZSfXLWtQS/",
-    "https://vt.tiktok.com/ZSfXLWGqR/",
-    "https://vt.tiktok.com/ZSfXLme4c/",
-    "https://vt.tiktok.com/ZSfXLXuxC/",
-    "https://vt.tiktok.com/ZSfXLyYMo/",
-    "https://vt.tiktok.com/ZSfXLyE6C/",
-    "https://vt.tiktok.com/ZSfXNkBgT/",
-    "https://vt.tiktok.com/ZSfXLw9sw/",
-    "https://vt.tiktok.com/ZSfXLKyPm/",
-    "https://vt.tiktok.com/ZSfXL3aoa/",
-    "https://vt.tiktok.com/ZSfXN24Ff/",
-    "https://vt.tiktok.com/ZSfXLox6Q/",
-    "https://vt.tiktok.com/ZSfXN8JnD/",
-    "https://vt.tiktok.com/ZSfXNF5C1/",
-    "https://vt.tiktok.com/ZSfXN6wcC/",
-    "https://vt.tiktok.com/ZSfXNF9hY/",
-    "https://vt.tiktok.com/ZSfXNYfeu/",
-    "https://vt.tiktok.com/ZSfXNjFxS/",
-    "https://vt.tiktok.com/ZSfXNF1MU/",
-    "https://vt.tiktok.com/ZSfXNY9MF/",
-    "https://vt.tiktok.com/ZSfXNNr68/",
-    "https://vt.tiktok.com/ZSfXNrkfM/",
-    "https://vt.tiktok.com/ZSfXNFD7Q/",
-    "https://vt.tiktok.com/ZSfXLTAsv/",
-    "https://vt.tiktok.com/ZSfXNjX51/",
-    "https://vt.tiktok.com/ZSfXNhK1J/",
-    "https://vt.tiktok.com/ZSfXLoRXA/",
-    "https://vt.tiktok.com/ZSfXNFJcB/",
-    "https://vt.tiktok.com/ZSfXNkPUA/",
-    "https://vt.tiktok.com/ZSfXL3JkN/",
-    "https://vt.tiktok.com/ZSfXNNC8Y/",
-    "https://vt.tiktok.com/ZSfXNY2Hy/",
-    "https://vt.tiktok.com/ZSfXN1YRU/",
-    "https://vt.tiktok.com/ZSfXNJYxC/",
-    "https://vt.tiktok.com/ZSfXL3qQv/",
-    "https://vt.tiktok.com/ZSfXLEuxd/",
-    "https://vt.tiktok.com/ZSfXLvbEJ/",
-    "https://vt.tiktok.com/ZSfXNLwgn/"
-];
+    <h2>Random TikTok Video</h2>
+    <button onclick="openRandom()">🎥 Xem video ngẫu nhiên</button>
 
-let random = links[Math.floor(Math.random() * links.length)];
+    <script>
+        const links = [
+            "https://lite.tiktok.com/t/ZSfqFVJhF/",
+            "https://lite.tiktok.com/t/ZSfqFaSHx/",
+            "https://lite.tiktok.com/t/ZSfqFDnLk/",
+            "https://lite.tiktok.com/t/ZSfqFqU9k/",
+            "https://lite.tiktok.com/t/ZSfqFu6hs/",
+            "https://lite.tiktok.com/t/ZSfqF56wP/",
+            "https://lite.tiktok.com/t/ZSfqFCKD3/",
+            "https://lite.tiktok.com/t/ZSfqFD26r/",
+            "https://lite.tiktok.com/t/ZSfqFkjDH/",
+            "https://lite.tiktok.com/t/ZSfqFBQMT/",
+            "https://lite.tiktok.com/t/ZSfqFktsS/",
+            "https://lite.tiktok.com/t/ZSfqFyune/",
+            "https://lite.tiktok.com/t/ZSfqFHh8x/",
+            "https://lite.tiktok.com/t/ZSfqFVCkx/",
+            "https://lite.tiktok.com/t/ZSfqFrTHQ/",
+            "https://lite.tiktok.com/t/ZSfqFf2jf/",
+            "https://lite.tiktok.com/t/ZSfqFMuKn/",
+            "https://lite.tiktok.com/t/ZSfqFVfSL/",
+            "https://lite.tiktok.com/t/ZSfqFDYeR/",
+            "https://lite.tiktok.com/t/ZSfqFDVFv/",
+            "https://lite.tiktok.com/t/ZSfqFM9h8/",
+            "https://lite.tiktok.com/t/ZSfqFuH8h/",
+            "https://lite.tiktok.com/t/ZSfqF5psM/",
+            "https://lite.tiktok.com/t/ZSfqFuwkK/",
+            "https://lite.tiktok.com/t/ZSfqF4vmG/",
+            "https://lite.tiktok.com/t/ZSfqFChB7/",
+            "https://lite.tiktok.com/t/ZSfqFQf8N/",
+            "https://lite.tiktok.com/t/ZSfqFUqH7/",
+            "https://lite.tiktok.com/t/ZSfqFDsWJ/",
+            "https://lite.tiktok.com/t/ZSfqFroks/",
+            "https://lite.tiktok.com/t/ZSfqFfAL4/",
+            "https://lite.tiktok.com/t/ZSfqFhfnU/",
+            "https://lite.tiktok.com/t/ZSfqFrLyd/",
+            "https://lite.tiktok.com/t/ZSfqFq1v5/",
+            "https://lite.tiktok.com/t/ZSfqFQU2G/",
+            "https://lite.tiktok.com/t/ZSfqFHcHx/",
+            "https://lite.tiktok.com/t/ZSfqFQHaG/",
+            "https://lite.tiktok.com/t/ZSfqFSyGw/",
+            "https://lite.tiktok.com/t/ZSfqYRsKu/"
+        ];
 
-document.getElementById("json").textContent = JSON.stringify({
-    status: "success",
-    data: random
-}, null, 4);
-</script>
+        function openRandom() {
+            const randomLink = links[Math.floor(Math.random() * links.length)];
+            window.location.href = randomLink;
+        }
+    </script>
 
 </body>
 </html>
